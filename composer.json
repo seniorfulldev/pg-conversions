@@ -1,0 +1,27 @@
+{
+  "name": "vasya/pg-conversions",
+  "description": "Conversions PHP Library",
+  "type": "library",
+  "keywords": [
+    "pg-conversions",
+    "conversions",
+    "npm"
+  ],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "seniorfulldev",
+      "email": "piaoyilong114@gmail.com"
+    }
+  ],
+  "minimum-stability": "dev",
+  "require": {
+    "php": ">=7.3."
+  },
+  "autoload": {
+    "psr-0": {
+      "conversions": "src/"
+    }
+  },
+  "version": "1.0.0"
+}
