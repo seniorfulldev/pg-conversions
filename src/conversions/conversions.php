@@ -27,17 +27,17 @@ class Conversions
 
     public function inchesToIPHY($inches, $currentRange){
         // Converts from inches to inches per 100 yards
-        return ($inches * 100 / $currentRange);
+        return $currentRange ? ($inches * 100 / $currentRange) :0;
     }
 
     public function inchesToMil($inches, $currentRange){
         // Converts from inches to milliradians.
-        return ($inches * 100 / $this->mil / $currentRange);
+        return $currentRange ? ($inches * 100 / $this->mil / $currentRange):0;
     }
 
     public function inchesToMinutesOfAngle($inches, $currentRange){
         // Converts from inches to minutes of angle (MoA).
-        return ($inches * 100 / $this->minuteOfAngle / $currentRange);
+        return $currentRange ?($inches * 100 / $this->minuteOfAngle / $currentRange):0;
     }
 
     public function isEven($input){
