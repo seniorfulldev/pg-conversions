@@ -13,34 +13,39 @@ class Conversions
      */
     public function __construct()
     {
-       
+
         $this->minuteOfAngle = 1.04719755119; // Inches at 100 yards
         $this->mil = 3.6; // Inches at 100 yards
         $this->pi = 3.14159265358979;
 
     }
 
-    public function degreesToRadians($degrees){
+    public function degreesToRadians($degrees)
+    {
         // Converts from a degree to a radian angle.
         return $degrees * $this->pi / 180;
     }
 
-    public function inchesToIPHY($inches, $currentRange){
+    public function inchesToIPHY($inches, $currentRange)
+    {
         // Converts from inches to inches per 100 yards
-        return $currentRange ? ($inches * 100 / $currentRange) :0;
+        return $currentRange ? ($inches * 100 / $currentRange) : 0;
     }
 
-    public function inchesToMil($inches, $currentRange){
+    public function inchesToMil($inches, $currentRange)
+    {
         // Converts from inches to milliradians.
-        return $currentRange ? ($inches * 100 / $this->mil / $currentRange):0;
+        return $currentRange ? ($inches * 100 / $this->mil / $currentRange) : 0;
     }
 
-    public function inchesToMinutesOfAngle($inches, $currentRange){
+    public function inchesToMinutesOfAngle($inches, $currentRange)
+    {
         // Converts from inches to minutes of angle (MoA).
-        return $currentRange ?($inches * 100 / $this->minuteOfAngle / $currentRange):0;
+        return $currentRange ? ($inches * 100 / $this->minuteOfAngle / $currentRange) : 0;
     }
 
-    public function isEven($input){
+    public function isEven($input)
+    {
         /// Returns true if the inputed integer is an even number.
         if ($input / 2 * 2 === $input) {
             return true;
@@ -49,30 +54,36 @@ class Conversions
         }
     }
 
-    public function metersToYards($meters){
+    public function metersToYards($meters)
+    {
         return ($meters / 0.9144);
     }
 
-    public function milesPerHourToInchesPerSecond($inputVelocityMPH){
+    public function milesPerHourToInchesPerSecond($inputVelocityMPH)
+    {
         // Converts from a miles per hour (MPH) to inches per second.
         return $inputVelocityMPH * 17.6004;
     }
 
-    public function radiansToDegrees($radians){
+    public function radiansToDegrees($radians)
+    {
         // Converts from a radian ro a degree angle.
         return $radians * 180 / $this->pi;
     }
 
-    public function sec($angle){
+    public function sec($angle)
+    {
         // Secant
         return 1 / cos($angle);
     }
 
-    public function sizeToDistance($actualTargetSizeInches, $reticleViewedTargetSizeMils){
+    public function sizeToDistance($actualTargetSizeInches, $reticleViewedTargetSizeMils)
+    {
         return round(($actualTargetSizeInches / 36) * 1000 / $reticleViewedTargetSizeMils);
     }
 
-    public function yardsToMeters($yards){
+    public function yardsToMeters($yards)
+    {
         return ($yards * 0.9144);
     }
 }
