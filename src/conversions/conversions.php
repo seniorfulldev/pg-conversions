@@ -1,6 +1,6 @@
 <?php
 
-namespace conversions;
+namespace Conversions;
 
 class Conversions
 {
